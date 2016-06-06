@@ -1,27 +1,39 @@
---------------------------------------------------
---      ____  ____ _____                        --
---     |    \|  _ )_   _|___ ____   __  __      --
---     | |_  )  _ \ | |/ ·__|  _ \_|  \/  |     --
---     |____/|____/ |_|\____/\_____|_/\/\_|     --
---                                              --
---------------------------------------------------
---                                              --
---       Developers: @Josepdal & @MaSkAoS       --
---     Support: @Skneos,  @iicc1 & @serx666     --
---                                              --
---------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+--                 								                  --
+--                								                  --
+--               Trojan Tg Bot                      --
+--			     Developed By @mr_trojan                --
+--                								                  --
+--                 								                  --
+------------------------------------------------------
+------------------------------------------------------
 
-do
+local function run(msg, matches)
+if matches[1]:lower() == 'version' then
+return [[
+🔸 Trojan Bot V 1.5 
+---------------------
+🔹 Based On DbTeam
+---------------------
+🔸 Thank For @iicc1
+---------------------
+🔹 Bot Created By @Mr_Trojan
+---------------------
+🔸 Open Source !
+---------------------
+🔹 Github Link : Coming Soon ...
 
-function run(msg, matches)
-  return 'DBTeam Bot V1 Supergroups\nAn advanced Administration bot based on yagop/telegram-bot\n\nDevelopers: @MaSkAoS @Josepdal\nSupport: @skneos @iicc1 @Serx666\nChannels: @DBTeamEN @DBTeamES\n\nCheckout: https://github.com/Josepdal/DBTeam\nGNU GPL v2 license.'
+]]
+end
 end
 
 return {
-  patterns = {
-    "^#version$"
-  }, 
-  run = run 
-}
 
-end
+patterns = {
+
+"[!#$/*&]([Vv][Ee][Rr][Ss][Ii][Oo][Nn])",
+
+},
+run = run
+}
